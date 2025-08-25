@@ -73,6 +73,33 @@ void insertAt(int pos, int value){
 
 }
 
+void deleteAt(int pos){
+    if(pos<0){
+        cout<<"Invalid position!";
+    }
+    else if(pos==0){
+        deleteFirst();
+    }
+    else{
+        int curpos=0;
+        node *ptr=head;
+        node *prev=nullptr;
+        while(ptr!=NULL && curpos<pos){
+            prev=ptr;
+            ptr=ptr->next;
+            curpos++;
+        }
+        if(ptr==NULL){
+            cout<<"Exceeds the limit";
+        }
+        else{
+            prev->next=ptr->next;
+            delete ptr;
+        }
+
+    }
+}
+
 
 void print(){
     node *ptr=head;
@@ -142,7 +169,17 @@ insertAt(b,a);
 
 cout<<endl<<endl;
 
-cout<<"The final Linked List is:    ";
+cout<<"The Linked List after inserting the value:    ";
+print();
+
+cout<<"Enter the position of the node to delete in the list:    ";
+int l;
+cin>>l;
+
+deleteAt(l);
+
+cout<<endl<<endl;
+cout<<"The final Linked List after deleting the value:    ";
 print();
 
 }
