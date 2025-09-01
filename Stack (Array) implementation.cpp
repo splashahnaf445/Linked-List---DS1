@@ -14,7 +14,7 @@ void push(int stk[],int n,int val){
     }
 }
 
-pop(int stk[],int n){
+void pop(int stk[],int n){
     if(top<=-1){
         cout<<"Stack under flow";
     }
@@ -51,3 +51,4 @@ pop(arr,n);
 
 
 }
+
