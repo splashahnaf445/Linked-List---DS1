@@ -1,3 +1,4 @@
+// Online C++ compiler to run C++ program online
 #include<iostream>
 
 using namespace std;
@@ -44,11 +45,13 @@ for(int i=0;i<n;i++){
 }
 
 
-for(int i=0;i<n;i++){
+for(int i=0;i<=top;i++){
         cout<<arr[i]<<" ";
     }
 pop(arr,n);
 
+for(int i=0;i<=top;i++){
+        cout<<arr[i]<<" ";
+    }
 
 }
-
